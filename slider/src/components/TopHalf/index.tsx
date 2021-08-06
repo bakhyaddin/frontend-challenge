@@ -18,7 +18,7 @@ const TopHalf:FunctionComponent<Props> = ({
 }) => (
     <TopHalfStyled>
         <CircularNumber number={number} color={color} />
-        <h1>
+        <h1 className="title" >
             {title}
         </h1>
         <p className="sub-title" > 

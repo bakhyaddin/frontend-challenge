@@ -1,4 +1,11 @@
 .slider-container {
   max-height: 100vh;
   display: inline-flex;
+  overflow: hidden;
+
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+
+  transition: transform 0.3s ease-out;
 }
