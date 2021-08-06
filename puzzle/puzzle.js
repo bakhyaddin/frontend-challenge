@@ -36,19 +36,19 @@ class Puzzle {
             const emptyTile = document.getElementById("0");
             const currentTile = document.getElementById(e.target.id);
 
-            const currentTilePosition = [parseInt(currentTile.style.left.split("px")[0]), parseInt(currentTile.style.top.split("px")[0])];
-            const emptyTilePosition = [parseInt(emptyTile.style.left.split("px")[0]), parseInt(emptyTile.style.top.split("px")[0])];
+            const currentTilePosition = [currentTile.style.left, currentTile.style.top];
+            const emptyTilePosition = [emptyTile.style.left, emptyTile.style.top];
 
             // updating moved and empty tiles' locations
-            currentTile.style.left = `${emptyTilePosition[0]}px`;
-            currentTile.style.top = `${emptyTilePosition[1]}px`;
+            currentTile.style.left = `${emptyTilePosition[0]}`;
+            currentTile.style.top = `${emptyTilePosition[1]}`;
 
-            emptyTile.style.left = `${currentTilePosition[0]}px`;
-            emptyTile.style.top = `${currentTilePosition[1]}px`;
+            emptyTile.style.left = `${currentTilePosition[0]}`;
+            emptyTile.style.top = `${currentTilePosition[1]}`;
 
             // move the tile by manupulating the DOM
             this.exchangeElements(currentTile, emptyTile, e, board);
-            // check if the puzzle is finished on every movement
+            // check if the puzzle is finished on every
             this.isFinished(board);
         }
     }
