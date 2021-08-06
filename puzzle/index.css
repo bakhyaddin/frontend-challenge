@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+figure.puzzle-figure{
+    width: 90%;
+    margin: 50px auto;
+}
+  
+ul.puzzle{
+    list-style-type: none;
+    background-color: black;
+    height: 380px;
+    width: 380px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+  
+li.tile{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100px;
+	height: 100px;
+	border: 10px inset #D3D3D3;
+	background: white;
+	font-size: 3rem;
+}
+
+li.tile:hover{
+    cursor: pointer;
+}
+
+figcaption{
+    margin: 20px 0 0 30px;
+    font-size: 2rem;
+    font-style: italic;
+}
